@@ -76,15 +76,16 @@ function main(){
         dot.transition()
             .duration(3000)
             .attr("cx", 500)
-            .attr("cy", 80).on("start", function repeat() {
-                d3.active(this)
+            .attr("cy", 80).on("end", function repeat() {
+                d3.select(this)
                     .attr("cx", 70)
                     .attr("cy", 350)
                   .transition()
+                  .duration(3000)
                     .attr("cx", 500)
                     .attr("cy", 80) 
-                  .transition()
-                    .on("start", repeat);
+                  
+                    .on("end", repeat);
               });
         ;
         
@@ -103,15 +104,14 @@ function main(){
         dot.transition()
             .duration(3000)
             .attr("cx", 700)
-            .attr("cy", 430).on("start", function repeat() {
-                d3.active(this)
+            .attr("cy", 430).on("end", function repeat() {
+                d3.select(this)
                     .attr("cx", 70)
                     .attr("cy", 350)
-                  .transition()
+                  .transition().duration(3000)
                     .attr("cx", 700)
                     .attr("cy", 430) 
-                  .transition()
-                    .on("start", repeat)});
+                    .on("end", repeat)});
 
 
             var dot = createCircle(70, 350, 10, 3, "orange");
@@ -119,15 +119,14 @@ function main(){
             dot.transition()
                 .duration(3000)
                 .attr("cx", 500)
-                .attr("cy", 80).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 80).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
-                      .transition()
+                      .transition().duration(3000)
                         .attr("cx", 500)
                         .attr("cy", 80) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
 
         
             var dot = createCircle(70, 350, 10, 3, "orange");
@@ -135,15 +134,15 @@ function main(){
             dot.transition()
                 .duration(3000)
                 .attr("cx", 500)
-                .attr("cy", 700).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 700).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
                       .transition()
+                      .duration(3000)
                         .attr("cx", 500)
                         .attr("cy", 700) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
     }
     else if(selected == "3"){
         clearCanvas();
@@ -153,15 +152,15 @@ function main(){
         dot.transition()
             .duration(3000)
             .attr("cx", 700)
-            .attr("cy", 430).on("start", function repeat() {
-                d3.active(this)
+            .attr("cy", 430).on("end", function repeat() {
+                d3.select(this)
                     .attr("cx", 70)
                     .attr("cy", 350)
                   .transition()
+                  .duration(3000)
                     .attr("cx", 700)
                     .attr("cy", 430) 
-                  .transition()
-                    .on("start", repeat)});
+                    .on("end", repeat)});
 
 
             var dot = createCircle(70, 350, 10, 3, "orange");
@@ -169,15 +168,15 @@ function main(){
             dot.transition()
                 .duration(3000)
                 .attr("cx", 500)
-                .attr("cy", 80).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 80).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
                       .transition()
+                      .duration(3000)
                         .attr("cx", 500)
                         .attr("cy", 80) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
 
 
             var dot = createCircle(70, 350, 10, 3, "orange");
@@ -185,45 +184,42 @@ function main(){
             dot.transition()
                 .duration(3000)
                 .attr("cx", 500)
-                .attr("cy", 700).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 700).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
-                      .transition()
+                      .transition().duration(3000)
                         .attr("cx", 500)
                         .attr("cy", 700) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
 
             var dot = createCircle(70, 350, 10, 3, "orange");
             startCanvas();
             dot.transition()
                 .duration(3000)
                 .attr("cx", 650)
-                .attr("cy", 600).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 600).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
-                      .transition()
+                      .transition().duration(3000)
                         .attr("cx", 650)
                         .attr("cy", 600) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
 
             var dot = createCircle(70, 350, 10, 3, "orange");
             startCanvas();
             dot.transition()
                 .duration(3000)
                 .attr("cx", 650)
-                .attr("cy", 230).on("start", function repeat() {
-                    d3.active(this)
+                .attr("cy", 230).on("end", function repeat() {
+                    d3.select(this)
                         .attr("cx", 70)
                         .attr("cy", 350)
-                      .transition()
+                      .transition().duration(3000)
                         .attr("cx", 650)
                         .attr("cy", 230) 
-                      .transition()
-                        .on("start", repeat)});
+                        .on("end", repeat)});
     }
 }
 
