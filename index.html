@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 Tutorial</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<body>
+    
+    <p>This is a paragraph</p>
+
+    <script>
+
+    var canvas = d3.select("body")
+        .append("svg")
+        .attr("width", 500)
+        .attr("height", 500);
+
+    var circle = canvas.append("circle")
+        .attr("cx", 250)
+        .attr("cy", 250)
+        .attr("r", 50)
+        .attr("fill", "orange");
+
+    var rect = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 50)
+        .attr("fill", "blue");
+
+    var line = canvas.append("line")
+        .attr("x1", 0)
+        .attr("y1", 100)
+        .attr("x2", 400)
+        .attr("y2", 400)
+        .attr("stroke", "red")
+        .attr("stroke-width", 5);
+
+    circle.transition()
+        .duration(1500)
+        .attr("cx", 500);
+    </script>
+
+</body>
+
+</html>
