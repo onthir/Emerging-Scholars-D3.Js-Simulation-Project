@@ -59,6 +59,8 @@ function clearCirclesOnCanvas(){
 function clearCanvas(){
     d3.selectAll("line").remove();
     clearCirclesOnCanvas();
+    d3.select("p").text("");
+    d3.select("h3").text("");
     startCanvas();
 }
 function main(){
@@ -90,7 +92,9 @@ function main(){
         ;
         
         // add text
-        d3.select("p").text("Unicast")
+        d3.select("h3").text("Unicast");
+        var string = "Unicast is the term used to describe communication where a piece of information is sent from one point to another point. In this case there is just one sender, and one receiver. Unicast transmission, in which a packet is sent from a single source to a specified destination, is still the predominant form of transmission on LANs and within the Internet. All LANs (e.g. Ethernet) and IP networks support the unicast transfer mode, and most users are familiar with the standard unicast applications (e.g. http, smtp, ftp and telnet) which employ the TCP transport protocol."
+        d3.select("p").text(string);
     }
     
 
@@ -143,6 +147,10 @@ function main(){
                         .attr("cx", 500)
                         .attr("cy", 700) 
                         .on("end", repeat)});
+
+                        var string = "Multicast is the term used to describe communication where a piece of information is sent from one or more points to a set of other points. In this case there is may be one or more senders, and the information is distributed to a set of receivers (theer may be no receivers, or any other number of receivers)."
+                        d3.select("h3").text("Multicast");
+                        d3.select("p").text(string);
     }
     else if(selected == "3"){
         clearCanvas();
@@ -220,6 +228,10 @@ function main(){
                         .attr("cx", 650)
                         .attr("cy", 230) 
                         .on("end", repeat)});
+
+                        var string = "Broadcast is the term used to describe communication where a piece of information is sent from one point to all other points. In this case there is just one sender, but the information is sent to all connected receivers.";
+                        d3.select("h3").text("Broadcast");
+                        d3.select("p").text(string);
     }
 }
 
